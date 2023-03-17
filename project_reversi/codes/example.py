@@ -15,6 +15,8 @@ for i_episode in range(20):
         else:
             action = random.choice(enables)
         observation, reward, done, info = env.step(action)
+        print(observation)
+        print('===================')
         env.render(mode='human')
         if done:
             print("Episode finished after {} timesteps".format(t+1))
